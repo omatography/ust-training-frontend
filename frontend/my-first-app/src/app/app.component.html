@@ -1,33 +1,46 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <body>
-  <h1 class="text-center">Angular Project</h1>
-<br> <br>
-<h4 class="text-center">My Courses</h4>
-<div style="display:flex;justify-content: center;" class="container">
- 
-    <card-comp *ngFor="let c of courseList" style="float:left;margin:10px;" img="{{c.img}}" title="{{c.title}}" >{{c.summary}}</card-comp>
-</div>
-<br>
-<h4 class="text-center">Detailed List</h4>
-<br>
-<div class="container">
-  <table class="table table-dark">
-    <thead>
-      <tr class="table-dark">
-        <th class="table-dark">Id</th>
-        <th class="table-dark">Title</th>
-        <th class="table-dark">Summary</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="table-dark" *ngFor="let c of courseList">
-        <td class="table-dark">{{c.id}}</td>
-        <td class="table-dark">{{c.title}}</td>
-        <td class="table-dark">{{c.summary}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <navbar-comp></navbar-comp>
+  <div class="home container-fluid">
+    <div class="container home-content"  >
+     <div>
+      <h1 class="head">Learn to Design Applications <br> Online</h1> <br>
+      <h4>Go down to explore our courses</h4>
+     </div>
+    </div>
+
+  </div>
+  <div style="height:100px"></div>
+  <h2 class="text-center">Our Courses</h2>
+  <div style="display:flex;justify-content: center;" class="container">
+  
+      <card-comp *ngFor="let c of courseList" style="float:left;margin:10px;" img="{{c.img}}" title="{{c.title}}" >{{c.summary}}</card-comp>
+  </div>
+  <br>
+  <h4 class="text-center">Detailed List</h4>
+  <br>
+  <div class="container">
+    <table class="table table-dark">
+      <thead>
+        <tr class="table-dark">
+          <th class="table-dark">Id</th>
+          <th class="table-dark">Title</th>
+          <th class="table-dark">Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-dark" *ngFor="let c of courseList">
+          <td class="table-dark">{{c.id}}</td>
+          <td class="table-dark">{{c.title}}</td>
+          <td class="table-dark">{{c.summary}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<br><br>
+  <random-activity></random-activity>
+  <div style="height:200px"></div>
+  
 
 
 </body>

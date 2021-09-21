@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: "card-comp",
-    template: `<div class="card" style="width: 300px;">
+    template: `<div class="card bg-dark" style="width: 300px;">
     <img src={{img}} class="card-img-top" alt="..." height="200"  >
     <div class="card-body">
       <h5 class="card-title">{{title}}</h5>
