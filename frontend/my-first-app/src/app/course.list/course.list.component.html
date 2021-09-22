@@ -1,0 +1,44 @@
+<h2 class="text-center">Our Courses</h2>
+ <div class="container">
+     
+     <div class="row">
+            <card-comp *ngFor="let c of courseList" class="col-3" img="{{c.img}}" title="{{c.title}}" >{{c.summary}}</card-comp>
+            <div class="col-3">
+                <div class="card bg-dark" >
+                    <div class="card-body">
+                        <div style="height: 40px;"></div>
+                        <input type="text" name="" #title style="margin:10px 0px" class="form-control" placeholder="Course Name">
+                        <input type="text" name="" #summary style="margin:10px 0px" class="form-control" placeholder="Description">
+                        <input type="text" name="" #img style="margin:10px 0px" class="form-control" placeholder="Image Link">
+                        <button class="btn btn-danger" (click) ="addCourse(title.value,summary.value,img.value)">Add this course</button>
+                    </div>
+                  </div>
+            </div>
+     </div>
+</div>
+    <!-- <div  >
+  
+        <card-comp *ngFor="let c of courseList" style="float:left;margin:10px;" img="{{c.img}}" title="{{c.title}}" >{{c.summary}}</card-comp>
+    </div> -->
+ 
+  <br>
+  <h4 class="text-center">Detailed List</h4>
+  <br>
+  <div class="container">
+    <table class="table table-dark">
+      <thead>
+        <tr class="table-dark">
+          <th class="table-dark">Id</th>
+          <th class="table-dark">Title</th>
+          <th class="table-dark">Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-dark" *ngFor="let c of courseList">
+          <td class="table-dark">{{c.id}}</td>
+          <td class="table-dark">{{c.title}}</td>
+          <td class="table-dark">{{c.summary}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
